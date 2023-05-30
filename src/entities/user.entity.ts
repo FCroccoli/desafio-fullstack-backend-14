@@ -15,10 +15,10 @@ export class User {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column({ length: 50 })
+  @Column({ length: 30 })
   name: string;
 
-  @Column({ length: 50 })
+  @Column({ length: 30 })
   last_name: string;
 
   @Column({ length: 360, unique: true })
@@ -28,7 +28,7 @@ export class User {
   password: string;
 
   @Column({ length: 15 })
-  telephone: string;
+  phone: string;
 
   @Column({ default: true })
   isActive: boolean;
