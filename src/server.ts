@@ -3,10 +3,10 @@ import AppDataSource from "./data-source";
 
 (async () => {
   await AppDataSource.initialize().catch((err) => {
-    console.error("Erro durante inicializacao", err);
+    console.error("Error during server initialization", err);
   });
 
   app.listen(3000, () => {
-    console.log("Servidor executando");
+    console.log("Server running on port 3000");
   });
 })();
