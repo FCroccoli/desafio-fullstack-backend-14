@@ -9,6 +9,7 @@ import { getUserController } from "../controllers/user/getUser.controller";
 import { deleteUserController } from "../controllers/user/deleteUser.controller";
 import { validateToken } from "../middlewares/validateToken.middleware";
 import { verifyUserIsActive } from "../middlewares/verifyUserIsActive.middleware";
+import { updateUserController } from "../controllers/user/updateUser.controller";
 
 const userRoutes = Router();
 
