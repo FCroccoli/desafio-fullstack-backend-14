@@ -11,7 +11,7 @@ export const updateContactSerializer: yup.Schema<iContactUpdate> = yup
     first_name: yup.string().notRequired(),
     last_name: yup.string().notRequired(),
     email: yup.string().email().notRequired(),
-    telephone: yup.string().notRequired(),
+    phone: yup.string().notRequired(),
   });
 
 export const createContactSerializer: yup.Schema<iContactRequest> = yup
@@ -20,7 +20,7 @@ export const createContactSerializer: yup.Schema<iContactRequest> = yup
     first_name: yup.string().required(),
     last_name: yup.string().required(),
     email: yup.string().email().required(),
-    telephone: yup.string().required(),
+    phone: yup.string().required(),
   });
 
 export const contactSerializer: yup.Schema<iContact> = yup.object().shape({
@@ -28,6 +28,6 @@ export const contactSerializer: yup.Schema<iContact> = yup.object().shape({
   first_name: yup.string().required(),
   last_name: yup.string().required(),
   email: yup.string().email().required(),
-  telephone: yup.string().required(),
+  phone: yup.string().required(),
   createdAt: yup.date().required(),
 });

@@ -15,7 +15,7 @@ const userRoutes = Router();
 
 userRoutes.post("", validateSchema(createUserSerializer), createUserController);
 
-userRoutes.get("", validateToken, getUserController);
+userRoutes.get("", validateToken, verifyUserIsActive, getUserController);
 
 userRoutes.delete("", validateToken, verifyUserIsActive, deleteUserController);
 
