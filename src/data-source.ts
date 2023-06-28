@@ -3,7 +3,7 @@ import "dotenv/config";
 import "reflect-metadata";
 import { User } from "./entities/user.entity";
 import { Contact } from "./entities/contact.entity";
-import { InitialMigration1685479678945 } from "./migrations/1685479678945-InitialMigration";
+import { InitialMigration1687917217202 } from "./migrations/1687917217202-InitialMigration";
 
 const dataSourceConfig = (): DataSourceOptions => {
   const nodeEnv: string = process.env.NODE_ENV!;
@@ -13,7 +13,7 @@ const dataSourceConfig = (): DataSourceOptions => {
       type: "postgres",
       url: process.env.DATABASE_URL!,
       entities: [User, Contact],
-      migrations: [InitialMigration1685479678945],
+      migrations: [InitialMigration1687917217202],
     };
   }
 

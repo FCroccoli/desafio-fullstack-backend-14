@@ -17,13 +17,13 @@ export const userLoginService = async ({
   });
 
   if (!user) {
-    throw new AppError("Invalid user or password!", 403);
+    throw new AppError("Usuário ou Senha invalidos!", 403);
   }
 
   const passwordCheck = await compare(password, user?.password as string);
 
   if (!passwordCheck) {
-    throw new AppError("Invalid user or password!", 403);
+    throw new AppError("Usuário ou Senha invalidos!", 403);
   }
 
   const token = jwt.sign(

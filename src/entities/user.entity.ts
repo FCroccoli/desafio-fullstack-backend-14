@@ -16,7 +16,7 @@ export class User {
   id: string;
 
   @Column({ length: 30 })
-  name: string;
+  first_name: string;
 
   @Column({ length: 30 })
   last_name: string;

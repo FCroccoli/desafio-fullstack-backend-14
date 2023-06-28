@@ -4,7 +4,7 @@ import { iUserRequest, iUser, iUserUpdate } from "../../interfaces/user";
 export const createUserSerializer: yup.Schema<iUserRequest> = yup
   .object()
   .shape({
-    name: yup.string().required(),
+    first_name: yup.string().required(),
     last_name: yup.string().required(),
     email: yup.string().email().required(),
     phone: yup.string().required(),
@@ -13,7 +13,7 @@ export const createUserSerializer: yup.Schema<iUserRequest> = yup
 
 export const userSerializer: yup.Schema<iUser> = yup.object().shape({
   id: yup.string().required(),
-  name: yup.string().required(),
+  first_name: yup.string().required(),
   last_name: yup.string().required(),
   email: yup.string().email().required(),
   phone: yup.string().required(),
@@ -23,7 +23,7 @@ export const userSerializer: yup.Schema<iUser> = yup.object().shape({
 export const updateUserSerializer: yup.Schema<iUserUpdate> = yup
   .object()
   .shape({
-    name: yup.string().notRequired(),
+    first_name: yup.string().notRequired(),
     last_name: yup.string().notRequired(),
     email: yup.string().email().notRequired(),
     phone: yup.string().notRequired(),

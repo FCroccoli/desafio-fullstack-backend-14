@@ -15,6 +15,6 @@ export const validateSchema =
 
       return next();
     } catch (error) {
-      throw new AppError("Invalid Input!", 400);
+      throw new AppError("Input Inválido", 400);
     }
   };

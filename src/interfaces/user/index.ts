@@ -1,5 +1,5 @@
 export interface iUserRequest {
-  name: string;
+  first_name: string;
   last_name: string;
   email: string;
   phone: string;
@@ -8,7 +8,7 @@ export interface iUserRequest {
 
 export interface iUser {
   id: string;
-  name: string;
+  first_name: string;
   last_name: string;
   email: string;
   phone: string;
@@ -16,7 +16,7 @@ export interface iUser {
 }
 
 export interface iUserUpdate {
-  name?: string | undefined | null;
+  first_name?: string | undefined | null;
   last_name?: string | undefined | null;
   email?: string | undefined | null;
   phone?: string | undefined | null;
